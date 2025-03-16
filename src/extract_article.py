@@ -44,16 +44,18 @@ def generate_response(paper_id, news_paper_text) -> str:
                     4. You are not allowed to change the casing of the content at all
                     5. Don't summarise the text use each and every text in the output.
                     6. DONT ADD ANY OF YOUR TEXT IN THE OUTPUT
-                    7. If you are getting long long text you are NOT allowed to ignore the small articles. YOU HAVE TO PROCESS EACH AND EVERY ARTICLE.
-                    8. Article name must be in the all caps so while parsing the data make sure the article title will be in capital in a given text.
-                    9. Don't add content of the paper in the article. And dont extract index of the paper as an article. You re extracting the index of the paper for the article
-                    10. Dont terminate the output extract the articles from the whole text and give it.
+                    7. I am passing you the whole text in two chunks make sure you will mention the page number in the output so that I can extract it later.
+                    8. If the article span is more than 1 page then mention multiple pages too.
+                    9. If you are getting long long text you are NOT allowed to ignore the small articles. YOU HAVE TO PROCESS EACH AND EVERY ARTICLE.
+                    10. Article name must be in the all caps so while parsing the data make sure the article title will be in capital in a given text.
+                    11. Don't add content of the paper in the article. And dont extract index of the paper as an article. You re extracting the index of the paper for the article
+                    12. Dont terminate the output extract the articles from the whole text and give it.
                     
                     Format as strict JSON enclosed in <JSON> tags:
                     <JSON>
                     {{"{paper_id}": [
-                            {{"title": "Example Article 1", "text": "Example text 1"}},
-                            {{"title": "Example Article 2", "text": "Example text 2"}}
+                            {{"Page  Number" : <Update the Page Number here>, "title": "Example Article 1", "text": "Example text 1"}},
+                            {{"Page  Number" : <Update the Page Number here>, "title": "Example Article 2", "text": "Example text 2"}}
                         ]
                     }}
                     </JSON>
