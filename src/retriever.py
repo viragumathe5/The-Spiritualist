@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 
 # --- Configuration ---
 INDEX_NAME = "spiritualist_dense_docs"
-DATA_PATH = "../data/retrieved_documents.json"
+DATA_PATH = "./retrieved_documents.json"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 
 # --- Connect to Elasticsearch ---
